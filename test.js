@@ -3,7 +3,7 @@ const app = express();
 const fetch = require('node-fetch');
 
 app.use(express.json());
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -47,4 +47,6 @@ app.get("/vin", async(request, response) =>{
     response.json({Make:data.Results[0].Make,Model:data.Results[0].Model,ModelYear:data.Results[0].ModelYear});
 });
 
-app.listen(PORT);
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
