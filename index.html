@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel = "stylesheet" href="style.css">
+	<title> NHTSA Application </title>
+</head>
+<body>
+	<header>
+		<h1>Car Details</h1>
+	</header>
+
+	<form action="/allmakes" method="GET">
+		<fieldset>
+				<button type ="submit">Get a list of all makes</button>
+		</fieldset>
+	</form>
+	<form action="/makeyear" method="GET">
+		<fieldset>
+				<h3>Get a list of all models</h3>
+				<label>Make</label>
+				<input type="text" id="makeID" name="makeid" required>
+				<br><br>
+                <label>Year</label>
+				<input type="text" id="yearID" name="yearid" required>
+				<br><br>
+				<button type ="submit">Search</button>
+				<br><br>
+		</fieldset>
+	</form>
+	<form action="/vin" method="GET">
+		<fieldset>
+				<h3>Get details by VIN</h3>
+				<label>VIN</label>
+				<input type ="text" id = 'vinID' name="vinid" required>
+				<br><br>
+
+				<button type ="submit">Search</button>
+		</fieldset>
+	</form>
+
+</body>
+</html>

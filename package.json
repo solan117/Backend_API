@@ -1,0 +1,21 @@
+{
+  "name": "express-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "node": "^16.6.1",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
