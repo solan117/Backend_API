@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
-    "swagger-ui-express": "^4.1.6",
-    "swagger-markdown": "^1.4.3"
+    "swagger-markdown": "^1.4.3",
+    "swagger-ui-express": "^4.1.6"
   },
   "scripts": {
     "start": "node main.js",

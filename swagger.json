@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "APIs for VSIC",
+        "title": "NHTSA APIs",
         "version": "1.0.0"
     },
     "license": {

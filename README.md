@@ -31,6 +31,11 @@ You can see there are three functionalities available in this project.
 
    User need to provide VIN number and they will get the year, make, and model of the vehicle.
 
+4. Added swagger to auto generate documentation for REST API.
+   Link for swagger.
+
+   localhost:3000/doc
+
 **API Documentation**
 
 [Documentation](swagger.md)
