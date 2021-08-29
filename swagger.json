@@ -1,0 +1,168 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "APIs for VSIC",
+        "version": "1.0.0"
+    },
+    "license": {
+        "name": "Licensed Under MIT",
+        "url": "https://spdx.org/licenses/MIT.html"
+    },
+    "contact": {
+        "name": "JSONPlaceholder",
+        "url": "https://jsonplaceholder.typicode.com"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "description": "Development server"
+        }
+    ],
+    "paths": {
+        "/makes": {
+            "get": {
+                "summary": "Retrieve a list of all makes",
+                "description": "Retrieve a list  of all makes",
+                "responses": {
+                    "200": {
+                        "description": "A list of makes.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "makes": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "makeName": {
+                                                        "type": "string",
+                                                        "description": "Makers name.",
+                                                        "example": "Honda"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/models": {
+            "get": {
+                "summary": "Retrieve a list of models",
+                "description": "Retrieve a list of all models by year and make",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "year",
+                        "type": "string",
+                        "required": true,
+                        "description": "Year",
+                        "schema": {
+                            "type": "string",
+                            "example": 2021
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "make",
+                        "type": "string",
+                        "required": true,
+                        "description": "Name of a maker",
+                        "schema": {
+                            "type": "string",
+                            "example": "HONDA"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of models",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "models": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "modelId": {
+                                                        "type": "number",
+                                                        "description": "Id of a model.",
+                                                        "example": 1861
+                                                    },
+                                                    "modelName": {
+                                                        "type": "string",
+                                                        "description": "Name of a model.",
+                                                        "example": "Accord"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/vin": {
+            "get": {
+                "summary": "Retrieve a detail of car",
+                "description": "Retrieve make, model and model year",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "vin",
+                        "type": "string",
+                        "required": true,
+                        "description": "VIN Number",
+                        "schema": {
+                            "type": "string",
+                            "example": "JH4CU26679C007112"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieve make, model and model year",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "make": {
+                                            "type": "string",
+                                            "description": "Maker",
+                                            "example": "ACURA"
+                                        },
+                                        "modelName": {
+                                            "type": "string",
+                                            "description": "Name of a model.",
+                                            "example": "TSX"
+                                        },
+                                        "modelYear": {
+                                            "type": "string",
+                                            "description": "Model year",
+                                            "example": 2009
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {},
+    "tags": []
+}
