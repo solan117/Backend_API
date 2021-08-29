@@ -34,7 +34,7 @@ You can see there are three functionalities available in this project.
 4. Added swagger to auto generate documentation for REST API.
    Link for swagger.
 
-   http://localhost:3000/doc
+   http://localhost:3000/docs/
 
 **API Documentation**
 
