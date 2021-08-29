@@ -11,14 +11,14 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "jsdoc": "^3.6.7",
     "nodemon": "^2.0.12",
-    "swagger-ui-express": "^4.1.6"
+    "swagger-ui-express": "^4.1.6",
+    "swagger-markdown": "^1.4.3"
   },
   "scripts": {
     "start": "node main.js",
     "dev": "nodemon main.js",
-    "doc": "jsdoc -d docs --configure jsconf.json main.js",
+    "docs": "swagger-markdown -i ./swagger.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
